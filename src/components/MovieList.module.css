@@ -1,0 +1,45 @@
+.wrapper {
+  padding: 0 30px;
+}
+
+.movie_box {
+  text-align: center;
+}
+
+.movie_poster {
+  overflow: hidden;
+}
+
+.movie_poster img {
+  width: 100%;
+  transition: 0.4s;
+}
+
+.movie_poster:hover img {
+  transform: scale(1.1);
+}
+
+.title {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 2; /* 라인수 */
+  -webkit-box-orient: vertical;
+  word-wrap: break-word;
+  line-height: 1.2em;
+  height: 2.4em;
+  margin-top: 20px;
+  font-size: 18px;
+}
+
+.date {
+  font-size: 14px;
+  font-weight: 300;
+}
+
+@media screen and (min-width: 1200px) {
+  .wrapper {
+    width: 1200px;
+    margin: 0 auto;
+  }
+}

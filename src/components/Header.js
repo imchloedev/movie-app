@@ -1,5 +1,5 @@
 import Link from "next/link";
-import styles from './Header.module.css';
+import styles from "./Header.module.css";
 
 export default function Header() {
   return (
@@ -22,7 +22,11 @@ export default function Header() {
 
       <div className={styles.gnb}>
         <ul>
-          <li>Home</li>
+          <Link href="/">
+            <a>
+              <li>Home</li>
+            </a>
+          </Link>
           <li>Movies</li>
           <li>TV Series</li>
         </ul>
