@@ -34,7 +34,6 @@ export default function Home() {
           <meta name="home" content="Movies" />
           <link rel="icon" href="/logoicon.png" />
         </Head>
-
         <MovieList list={list} />
       </div>
     </>

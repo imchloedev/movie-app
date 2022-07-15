@@ -11,10 +11,10 @@ export default function MovieList({ list }) {
 
   return (
     <div className={styles.wrapper}>
+      <h2>TRENDING NOW</h2>
       <Swiper
         spaceBetween={20}
         slidesPerView={3.5}
-        loop={true}
         scrollbar={{
           hide: true,
         }}
