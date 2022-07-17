@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap");
 
 * {
   box-sizing: border-box;
@@ -8,7 +8,7 @@ html,
 body {
   padding: 0;
   margin: 0;
-  font-family: 'Lato', sans-serif;
+  font-family: "Lato", sans-serif;
   font-weight: 400;
   box-sizing: border-box;
   color: #efefef;
@@ -24,16 +24,87 @@ ul li {
   list-style: none;
 }
 
-
 .swiper-scrollbar {
   width: 100% !important;
   left: 0 !important;
   height: 2px !important;
-  background-color: rgba(255,255,255, 0.3) !important;
+  background-color: rgba(255, 255, 255, 0.3) !important;
   bottom: 0 !important;
   border-radius: 0 !important;
 }
 
-.swiper-scrollbar-drag{
-  background-color: rgba(255,255,255, 0.6) !important;
+.swiper-scrollbar-drag {
+  background-color: rgba(255, 255, 255, 0.6) !important;
+}
+
+
+.loading_box {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 10;
+}
+
+.item {
+  display: block;
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  background-color: #eee;
+  margin-left: 10%;
+  margin-top: 100px;
+  position: relative;
+}
+
+.item7 {
+  background: transparent;
+}
+
+.item7 .dot {
+  width: 20px;
+  height: 20px;
+  display: block;
+  position: absolute;
+  top: 50%;
+  border-radius: 50%;
+  background-color: #eee;
+  transform: translateY(-50%);
+  animation-name: item7-dot;
+  animation-duration: 1.2s;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
+}
+
+.dot1 {
+  left: 20%;
+  transform: translateX(-50%);
+}
+
+ .dot2 {
+  left: 50%;
+  transform: translateX(-50%);
+  animation-delay: 0.2s;
+}
+
+.dot3 {
+  transform: translateX(-50%);
+  left: 80%;
+  animation-delay: 0.4s;
+}
+
+
+@keyframes item7-dot {
+  0% {
+    opacity: 1;
+    top: 50%;
+  }
+  50% {
+    opacity: 0.3;
+    top: 0;
+  }
+  100% {
+    opacity: 1;
+    top: 50%;
+  }
 }

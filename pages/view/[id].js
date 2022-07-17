@@ -7,7 +7,6 @@ import { useState } from "react";
 
 const Post = ({item}) => {
 
-
   return (
     <>
       <Head>
@@ -21,7 +20,8 @@ const Post = ({item}) => {
 
 export default Post;
 
-
+// 서버사이드 렌더링
+// 내용이 실시간으로 바뀌지 않을 때 사용
 
 export async function getServerSideProps(context) {
   const id = context.params.id;
