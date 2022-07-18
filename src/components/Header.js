@@ -2,7 +2,6 @@ import Link from "next/link";
 import styles from "./Header.module.css";
 
 export default function Header() {
-
   return (
     <div className={styles.header}>
       <Link href="/">
@@ -33,8 +32,11 @@ export default function Header() {
               <li>Movies</li>
             </a>
           </Link>
-
-          <li>TV Series</li>
+          <Link href="/admin">
+            <a>
+              <li>Admin</li>
+            </a>
+          </Link>
         </ul>
       </div>
     </div>

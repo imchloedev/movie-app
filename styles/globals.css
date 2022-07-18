@@ -20,6 +20,11 @@ a {
   text-decoration: none;
 }
 
+button,
+input {
+  font-family: "Lato", sans-serif;
+}
+
 ul li {
   list-style: none;
 }
@@ -36,7 +41,6 @@ ul li {
 .swiper-scrollbar-drag {
   background-color: rgba(255, 255, 255, 0.6) !important;
 }
-
 
 .loading_box {
   position: absolute;
@@ -81,7 +85,7 @@ ul li {
   transform: translateX(-50%);
 }
 
- .dot2 {
+.dot2 {
   left: 50%;
   transform: translateX(-50%);
   animation-delay: 0.2s;
@@ -92,7 +96,6 @@ ul li {
   left: 80%;
   animation-delay: 0.4s;
 }
-
 
 @keyframes item7-dot {
   0% {
