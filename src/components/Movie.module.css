@@ -2,22 +2,11 @@
   padding: 40px 30px 80px 30px;
 }
 
-.movie_poster {
-
-}
-
 .movie_poster img {
   width: 300px;
 }
 
-
-.movie_des {
-  
-}
-
-
 @media screen and (min-width: 648px) {
-  
   .wrapper {
     display: flex;
     justify-content: space-between;
@@ -29,18 +18,14 @@
     justify-content: center;
     margin-left: 40px;
   }
-
 }
-
 
 @media screen and (min-width: 1200px) {
   .wrapper {
     width: 1200px;
     margin: 0 auto;
   }
-  
 
   .movie_des {
-    
   }
 }

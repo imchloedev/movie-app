@@ -5,28 +5,7 @@ import styles from "../styles/Home.module.css";
 import axios from "axios";
 import { useState } from "react";
 
-export default function Home() {
-  const [isLoading, setIsLoading] = useState(true);
-  const [list, setList] = useState([]);
-  const API_URL =
-    "http://api.themoviedb.org/3/movie/popular?api_key=09cd6d519eaa550f9712a7241ec0b2b4&language=en-US";
-
-  function getData() {
-    axios
-      .get(API_URL)
-      .then((res) => {
-        return res.data;
-      })
-      .then((data) => {
-        setList(data.results);
-        setIsLoading(false)
-      })
-      .catch((error) => console.log(error));
-  }
-
-  useEffect(() => {
-    getData();
-  }, []);
+export default function Home({ list }) { 
 
   return (
     <>
@@ -35,18 +14,23 @@ export default function Home() {
           <title>Netflix</title>
           <meta name="home" content="Movies" />
           <link rel="icon" href="/logoicon.png" />
-        </Head>
-        {isLoading && (
-          <div className="loading_box">
-            <div className="item item7">
-              <div className="dot dot1"></div>
-              <div className="dot dot2"></div>
-              <div className="dot dot3"></div>
-            </div>
-          </div>
-        )}
+        </Head> 
         <MovieList list={list} />
       </div>
     </>
   );
+}
+
+
+export async function getStaticProps() {
+  const API_URL =
+  "http://api.themoviedb.org/3/movie/popular?api_key=09cd6d519eaa550f9712a7241ec0b2b4&language=en-US";
+  const res = await axios.get(API_URL);
+  const data = res.data.results;
+
+  return {
+    props: {
+      list : data,
+    }
+  }
 }
