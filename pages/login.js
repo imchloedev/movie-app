@@ -2,13 +2,14 @@ import axios from "axios";
 import { useRouter } from "next/router";
 
 export default function login() {
-  const router = useRouter;
+  const router = useRouter();
 
-  function login() {
+  function login(e) {
+    e.preventDefault();
+    
     axios.post("/api/login").then((res) => {
       if (res.status === 200) {
         router.push("/admin");
-        prompt("성공1")
       }
     });
   }

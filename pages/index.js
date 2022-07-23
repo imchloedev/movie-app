@@ -13,7 +13,6 @@ export default function Home({ list }) {
         <Head>
           <title>Netflix</title>
           <meta name="home" content="Movies" />
-          <link rel="icon" href="/logoicon.png" />
         </Head> 
         <MovieList list={list} />
       </div>
