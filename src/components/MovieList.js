@@ -4,10 +4,9 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import { Scrollbar } from "swiper";
 import "swiper/css";
 import "swiper/css/scrollbar";
-import { useRef } from "react";
+
 
 export default function MovieList({ list }) {
-  const paginationRef = useRef(null);
 
   return (
     <div className={styles.wrapper}>

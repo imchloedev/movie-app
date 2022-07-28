@@ -16,16 +16,16 @@ const Post = ({ item }) => {
     </>
   );
 };
- 
+
 export default Post;
 
 // 서버사이드 렌더링
 // id값에 따라 어떤 영화가 나올지 모름 --> 요청 때마다 달라진다 --> Server Side Rendering
 
 export async function getServerSideProps(context) {
+  const API_KEY = process.env.API_KEY;
   const id = context.params.id;
-  const apiUrl = `http://api.themoviedb.org/3/movie/${id}?api_key=09cd6d519eaa550f9712a7241ec0b2b4&language=en-US`;
-
+  const apiUrl = `https://api.themoviedb.org/3/movie/${id}?api_key=${API_KEY}&language=en-US`;
   const res = await axios.get(apiUrl);
   const data = res.data;
 
