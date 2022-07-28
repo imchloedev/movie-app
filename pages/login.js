@@ -1,5 +1,6 @@
 import axios from "axios";
 import { useRouter } from "next/router";
+import Seo from "../src/components/Seo";
 
 export default function login() {
   const router = useRouter();
@@ -15,7 +16,9 @@ export default function login() {
   }
 
   return (
-    <div
+  <>
+  <Seo title={'Login'}/>
+   <div
       style={{
         padding: "80px 30px",
         maxWidth: "600px",
@@ -79,5 +82,6 @@ export default function login() {
         </div>
       </form>
     </div>
+  </>
   );
 }

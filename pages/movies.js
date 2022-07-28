@@ -1,20 +1,24 @@
 import axios from "axios";
 import styles from "../src/components/Movies.module.css";
+import Seo from "../src/components/Seo";
 
 export default function movies({ movies }) {
   return (
-    <div className={styles.wrapper}>
-      {movies.map((movie) => (
-        <div key={movie.id}>
-          <div className={styles.movie_poster}>
-            <img
-              src={`https://image.tmdb.org/t/p/original/${movie.poster_path}`}
-              alt={movie.title}
-            />
+    <>
+    <Seo title={"Upcoming"}/>
+      <div className={styles.wrapper}>
+        {movies.map((movie) => (
+          <div key={movie.id}>
+            <div className={styles.movie_poster}>
+              <img
+                src={`https://image.tmdb.org/t/p/original/${movie.poster_path}`}
+                alt={movie.title}
+              />
+            </div>
           </div>
-        </div>
-      ))}
-    </div>
+        ))}
+      </div>
+    </>
   );
 }
 
